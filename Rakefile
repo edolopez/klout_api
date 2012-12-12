@@ -23,7 +23,7 @@ end
 
 desc "Build and release the gem"
 task :release => :build do
-  system "gem push klout-#{KloutAPI::VERSION}.gem"
+  system "gem push klout_api-#{KloutAPI::VERSION}.gem"
 end
 
 task :default => :test
