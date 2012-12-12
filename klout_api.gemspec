@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency('fakeweb')
   s.add_development_dependency('guard-rspec')
   s.add_development_dependency('rspec')
-  s.name = "kloutAPI"
+  s.name = "klout_api"
   s.authors = ["Brian Getting"]
   s.description = %q{Implements the complete functionality of the Klout REST API (v2+).}
   s.email = ["brian@tatem.ae"]
@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.summary = %q{A library which implements the complete functionality of of the Klout REST API (v2+).}
   s.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.version = Klout::VERSION
+  s.version = KloutAPI::VERSION
   s.platform = Gem::Platform::RUBY
   s.required_rubygems_version = Gem::Requirement.new('>= 1.3.6') if s.respond_to? :required_rubygems_version=
 end

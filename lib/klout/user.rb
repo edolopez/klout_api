@@ -1,4 +1,4 @@
-require 'kloutAPI'
+require 'klout_api'
 require 'json'
 
 module KloutAPI
@@ -33,7 +33,7 @@ module KloutAPI
     private
     
     def get(action = nil)
-      Klout.get uri_for(action), :query => {key: Klout.api_key}
+      KloutAPI.get uri_for(action), :query => {key: KloutAPI.api_key}
     end
     
     def uri_for(action = nil)

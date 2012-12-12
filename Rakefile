@@ -1,7 +1,7 @@
 $LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
 require "bundler/version"
 require "rake/testtask"
-require "./lib/kloutAPI"
+require "./lib/klout_api"
 require 'rspec/core'
 require 'rspec/core/rake_task'
 
@@ -18,12 +18,12 @@ task :default => :spec
 
 desc "Build the gem"
 task :build do
-  system "gem build klout.gemspec"
+  system "gem build klout_api.gemspec"
 end
 
 desc "Build and release the gem"
 task :release => :build do
-  system "gem push klout-#{Klout::VERSION}.gem"
+  system "gem push klout-#{KloutAPI::VERSION}.gem"
 end
 
 task :default => :test

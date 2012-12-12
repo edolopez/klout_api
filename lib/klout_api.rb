@@ -15,22 +15,22 @@ module KloutAPI
   class << self
     # Allow Klout.api_key = "..."
     def api_key=(api_key)
-      Klout.api_key = api_key
+      KloutAPI.api_key = api_key
     end
 
     def base_uri=(uri)
-      Klout.base_uri uri
+      KloutAPI.base_uri uri
     end
 
     # Allows the initializer to turn off actually communicating to the REST service for certain environments
     # Requires fakeweb gem to be installed
     def disable
-      FakeWeb.register_uri(:any, %r|#{Regexp.escape(Klout.base_uri)}|, :body => '{"Disabled":true}', :content_type => 'application/json; charset=utf-8')
+      FakeWeb.register_uri(:any, %r|#{Regexp.escape(KloutAPI.base_uri)}|, :body => '{"Disabled":true}', :content_type => 'application/json; charset=utf-8')
     end
   end
 
   # Represents a Klout API error and contains specific data about the error.
-  class KloutError < StandardError
+  class KloutAPIError < StandardError
     attr_reader :data
     def initialize(data)
       @data = Hashie::Mash.new(data)
@@ -40,12 +40,12 @@ module KloutAPI
 
   class ClientError < StandardError; end
   class ServerError < StandardError; end
-  class BadRequest < KloutError; end
+  class BadRequest < KloutAPIError; end
   class Unauthorized < StandardError; end
   class NotFound < ClientError; end
   class Unavailable < StandardError; end
 
-  class Klout
+  class KloutAPI
     include HTTParty
 
     @@base_uri = "http://api.klout.com/v2/"
