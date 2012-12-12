@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency('fakeweb')
   s.add_development_dependency('guard-rspec')
   s.add_development_dependency('rspec')
-  s.name = "klout"
+  s.name = "kloutAPI"
   s.authors = ["Brian Getting"]
   s.description = %q{Implements the complete functionality of the Klout REST API (v2+).}
   s.email = ["brian@tatem.ae"]

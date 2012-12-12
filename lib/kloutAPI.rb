@@ -11,7 +11,7 @@ require 'klout/version'
 require 'klout/identity'
 require 'klout/user'
 
-module Klout
+module KloutAPI
   class << self
     # Allow Klout.api_key = "..."
     def api_key=(api_key)

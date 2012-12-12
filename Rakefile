@@ -1,7 +1,7 @@
 $LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
 require "bundler/version"
 require "rake/testtask"
-require "./lib/klout"
+require "./lib/kloutAPI"
 require 'rspec/core'
 require 'rspec/core/rake_task'
 

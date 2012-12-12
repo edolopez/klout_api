@@ -1,1 +1,1 @@
-require 'klout'
+require 'kloutAPI'

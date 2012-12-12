@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Klout
+module KloutAPI
   describe Identity do
     # TODO: test each method
   end

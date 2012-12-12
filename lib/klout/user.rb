@@ -1,7 +1,7 @@
-require 'klout'
+require 'kloutAPI'
 require 'json'
 
-module Klout
+module KloutAPI
   # Represents a user
   class User
     attr_reader :klout_id

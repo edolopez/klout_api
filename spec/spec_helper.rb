@@ -1,5 +1,5 @@
 require 'fakeweb'
-require 'klout'
+require 'kloutAPI'
 
 FakeWeb.allow_net_connect = false
 

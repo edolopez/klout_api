@@ -1,7 +1,7 @@
-require 'klout'
+require 'kloutAPI'
 require 'json'
 
-module Klout
+module KloutAPI
   # Represents an identity
   class Identity
     class << self
