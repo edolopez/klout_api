@@ -17,7 +17,7 @@ pkg
 # RVM generated
 .rvmrc
 
-*.gem
+#*.gem
 Gemfile.lock
 .document
 
