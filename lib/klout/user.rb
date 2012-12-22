@@ -33,7 +33,7 @@ module KloutAPI
     private
     
     def get(action = nil)
-      KloutAPI.get uri_for(action), :query => {key: KloutAPI.api_key}
+      KloutAPI.get uri_for(action), :query => {:key =>  KloutAPI.api_key}
     end
     
     def uri_for(action = nil)
